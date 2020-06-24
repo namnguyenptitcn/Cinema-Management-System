@@ -5,11 +5,6 @@
  */
 package model;
 import java.io.Serializable;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -19,34 +14,28 @@ import java.util.Date;
 public class Film implements Serializable{
     private int id;
     private String name;
+    private String description;
+    private Date airDate;
+    private String manufacturer;
+    private String national;
     private String type;
-    private String des;
-    private Date air_date;
-    private String projection_time;
-    private String director;
+    private String directors;
+    private String duration;
     
     public Film(){
         super();
     }
 
-   
-
-    public Film(int id, String name, String type, String des, Date air_date, String projection_time, String director) {
+    public Film(int id, String name, String description, Date airDate, String manufacturer, String national, String type, String directors, String duration) {
         this.id = id;
         this.name = name;
+        this.description = description;
+        this.airDate = airDate;
+        this.manufacturer = manufacturer;
+        this.national = national;
         this.type = type;
-        this.des = des;
-        this.air_date = air_date;
-        this.projection_time = projection_time;
-        this.director = director;
-    }
-
-    public void setProjection_time(String projection_time) {
-        this.projection_time = projection_time;
-    }
-
-    public String getProjection_time() {
-        return projection_time;
+        this.directors = directors;
+        this.duration = duration;
     }
 
     public int getId() {
@@ -57,20 +46,32 @@ public class Film implements Serializable{
         return name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public Date getAirDate() {
+        return airDate;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public String getNational() {
+        return national;
+    }
+
     public String getType() {
         return type;
     }
 
-    public String getDes() {
-        return des;
+    public String getDirectors() {
+        return directors;
     }
 
-    public Date getAir_date() {
-        return air_date;
-    }
-
-    public String getDirector() {
-        return director;
+    public String getDuration() {
+        return duration;
     }
 
     public void setId(int id) {
@@ -81,21 +82,36 @@ public class Film implements Serializable{
         this.name = name;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setAirDate(Date airDate) {
+        this.airDate = airDate;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setNational(String national) {
+        this.national = national;
+    }
+
     public void setType(String type) {
         this.type = type;
     }
 
-    public void setDes(String des) {
-        this.des = des;
+    public void setDirectors(String directors) {
+        this.directors = directors;
     }
 
-    public void setAir_date(Date air_date) {
-        this.air_date = air_date;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
     
+    
+   
+
     
 }

@@ -25,7 +25,7 @@ public class FilmDAO extends DAO {
 
     public ArrayList<Film> loadAllPhim() {
         PreparedStatement pst;
-        String query = "select ID, Name, the_loai, Projection_time, Air_date, Director, Describe from Film order by Name";
+        String query = "select id, name, airDate, duration from film order by name";
         ArrayList<Film> lstFilm = new ArrayList<>();
         Film film;
         try {
@@ -35,18 +35,14 @@ public class FilmDAO extends DAO {
                 film = new Film();
                 film.setId(rs.getInt("ID"));
                 film.setName(rs.getString("Name"));
-                film.setType(rs.getString("Type"));
-
-                film.setProjection_time(rs.getString("Projection_time"));
-                film.setAir_date(rs.getDate("Air_date"));
-
-                film.setDirector(rs.getString("Director"));
-
-                film.setDes(rs.getString("Describe"));
+                film.setAirDate(rs.getDate("airDate"));
+                film.setDuration(rs.getString("Duration"));
+                
+                
                 lstFilm.add(film);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+           e.printStackTrace();
         }
         return lstFilm;
     }

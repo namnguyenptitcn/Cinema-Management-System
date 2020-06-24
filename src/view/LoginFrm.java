@@ -5,12 +5,7 @@
  */
 package view;
 
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-import dao.DAO;
 import dao.EmployeeDao;
 import java.awt.Color;
 import model.Employee;
@@ -116,13 +111,15 @@ public class LoginFrm extends javax.swing.JFrame {
         jPassLabel.setText("Password");
         jPanel2.add(jPassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
 
+        btnLogin.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.PNG"))); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
-        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
+        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 270, 90, 40));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Download\\rsz_mpctc3pcta0n-hpctc3pctacnh-onyx-cinema-led-e1544440515817.jpg")); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 410));

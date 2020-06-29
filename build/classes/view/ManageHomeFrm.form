@@ -126,7 +126,7 @@
               <Font name="Arial Black" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\if_video_44707.png"/>
+              <Image iconType="3" name="/images/if_video_44707.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Film"/>
           </Properties>
@@ -140,7 +140,7 @@
               <Font name="Arial Black" size="14" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\if_clock_1055090.png"/>
+              <Image iconType="3" name="/images/if_clock_1055090.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Showtime"/>
           </Properties>
@@ -154,7 +154,7 @@
               <Font name="Arial Black" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\showman.png"/>
+              <Image iconType="3" name="/images/showman.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Client"/>
           </Properties>
@@ -165,7 +165,7 @@
               <Font name="Arial Black" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\newspaper.png"/>
+              <Image iconType="3" name="/images/newspaper.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Stat"/>
           </Properties>
@@ -176,7 +176,7 @@
               <Font name="Arial Black" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\cash.png"/>
+              <Image iconType="3" name="/images/cash.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Bill"/>
           </Properties>
@@ -187,7 +187,7 @@
               <Font name="Arial Black" size="18" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\rsz_home-icon.png"/>
+              <Image iconType="3" name="/images/rsz_home-icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="ManageHome"/>
           </Properties>

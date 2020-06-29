@@ -91,9 +91,10 @@ public class LoginFrm extends javax.swing.JFrame {
         jPanel2.add(jUsernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 201, 40));
 
         jUsernameLabel.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jUsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        jUsernameLabel.setForeground(new java.awt.Color(255, 255, 0));
+        jUsernameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-account-32.png"))); // NOI18N
         jUsernameLabel.setText("Username");
-        jPanel2.add(jUsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, 40));
+        jPanel2.add(jUsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, 40));
 
         jPasswordField.setText("jPasswordField1");
         jPasswordField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -107,9 +108,10 @@ public class LoginFrm extends javax.swing.JFrame {
         jPanel2.add(jPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 201, 40));
 
         jPassLabel.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jPassLabel.setForeground(new java.awt.Color(255, 255, 255));
+        jPassLabel.setForeground(new java.awt.Color(255, 255, 51));
+        jPassLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-key-32.png"))); // NOI18N
         jPassLabel.setText("Password");
-        jPanel2.add(jPassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
+        jPanel2.add(jPassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         btnLogin.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.PNG"))); // NOI18N
@@ -121,7 +123,7 @@ public class LoginFrm extends javax.swing.JFrame {
         });
         jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 270, 90, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Download\\rsz_mpctc3pcta0n-hpctc3pctacnh-onyx-cinema-led-e1544440515817.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_mpctc3pcta0n-hpctc3pctacnh-onyx-cinema-led-e1544440515817.jpg"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 410));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -64,7 +64,7 @@ public class ManageHomeFrm extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_video_44707.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/if_video_44707.png"))); // NOI18N
         jButton2.setText("Film");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +73,7 @@ public class ManageHomeFrm extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_clock_1055090.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/if_clock_1055090.png"))); // NOI18N
         jButton3.setText("Showtime");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,19 +82,19 @@ public class ManageHomeFrm extends javax.swing.JFrame {
         });
 
         jButton4.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\showman.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/showman.png"))); // NOI18N
         jButton4.setText("Client");
 
         jButton5.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\newspaper.png")); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/newspaper.png"))); // NOI18N
         jButton5.setText("Stat");
 
         jButton6.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\cash.png")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cash.png"))); // NOI18N
         jButton6.setText("Bill");
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Download\\rsz_home-icon.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_home-icon.png"))); // NOI18N
         jLabel1.setText("ManageHome");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

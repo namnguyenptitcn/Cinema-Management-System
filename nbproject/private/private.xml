@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/model/Film.java</file>
             <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/dao/ShowTimeDAO.java</file>
             <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/view/AddShowtimeFrm.java</file>
             <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/dao/TimeDAO.java</file>
             <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/view/LoginFrm.java</file>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/dao/RoomDAO.java</file>
+            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/view/ManageHomeFrm.java</file>
+            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/model/Showtime.java</file>
         </group>
     </open-files>
 </project-private>

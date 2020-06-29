@@ -526,7 +526,9 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jTableTimeMouseClicked
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        logfrm = new LoginFrm();
+        logfrm.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

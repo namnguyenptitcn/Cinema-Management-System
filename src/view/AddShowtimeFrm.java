@@ -136,7 +136,6 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableTime = new javax.swing.JTable();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         Date date = new Date();
         SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         jSpinner = new javax.swing.JSpinner(sm);
@@ -188,9 +187,6 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jTableTime);
 
-        jDateChooser1.setDateFormatString("dd/MM/yyyy");
-        jDateChooser1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
         JSpinner.DateEditor de = new JSpinner.DateEditor(jSpinner, "HH:mm");
         jSpinner.setEditor(de);
         jSpinner.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -240,13 +236,12 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jButtonAddShowtime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonAddShowtime)
                             .addGap(18, 18, 18)
                             .addComponent(jButtonDeleteTime))
-                        .addComponent(jSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTextFieldIdTime, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(187, 187, 187))
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -269,12 +264,11 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jTextFieldIdTime, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
-                        .addComponent(jLabel5)))
-                .addGap(29, 29, 29)
+                        .addComponent(jLabel5)
+                        .addGap(29, 29, 29)))
                 .addComponent(jSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -428,7 +422,6 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 0, 0));
-        jButton8.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\icons8-exit-26.png")); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -606,7 +599,6 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAddTime;
     private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonDeleteTime;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

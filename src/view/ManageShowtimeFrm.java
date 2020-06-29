@@ -36,7 +36,6 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jDateChooser = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -46,14 +45,9 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        jDateChooser.setDateFormatString("dd/MM/yyyy");
-        jDateChooser.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTabbedPane1.addTab("tab1", jDateChooser);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_sign-add_299068.png")); // NOI18N
         jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +56,6 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_edit_173002.png")); // NOI18N
         jButton3.setText("Edit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +64,6 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         });
 
         jButton4.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_minus_1645995.png")); // NOI18N
         jButton4.setText("Delete");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,14 +72,12 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_clock_1055090.png")); // NOI18N
         jLabel1.setText("Manage Showtime");
 
         jLabelName.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\icons8-exit-26.png")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -202,7 +192,6 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private com.toedter.calendar.JDateChooser jDateChooser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelName;
     private javax.swing.JPanel jPanel2;

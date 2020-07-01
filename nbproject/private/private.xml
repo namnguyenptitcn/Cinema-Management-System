@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/model/Film.java</file>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/dao/ShowTimeDAO.java</file>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/view/AddShowtimeFrm.java</file>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/dao/TimeDAO.java</file>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/view/LoginFrm.java</file>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/view/ManageHomeFrm.java</file>
-            <file>file:/F:/netBeans/BTL_CNPM/Cinema-Management-System/src/model/Showtime.java</file>
+            <file>file:/F:/Cong%20Nghe%20Phan%20Mem/Cinema-Management-System/src/model/Film.java</file>
+            <file>file:/F:/Cong%20Nghe%20Phan%20Mem/Cinema-Management-System/src/model/Ticket.java</file>
+            <file>file:/F:/Cong%20Nghe%20Phan%20Mem/Cinema-Management-System/src/view/StatisticalTicket.java</file>
+            <file>file:/F:/Cong%20Nghe%20Phan%20Mem/Cinema-Management-System/src/dao/statDAO.java</file>
+            <file>file:/F:/Cong%20Nghe%20Phan%20Mem/Cinema-Management-System/src/view/AddShowtimeFrm.java</file>
+            <file>file:/F:/Cong%20Nghe%20Phan%20Mem/Cinema-Management-System/src/model/Showtime.java</file>
         </group>
     </open-files>
 </project-private>

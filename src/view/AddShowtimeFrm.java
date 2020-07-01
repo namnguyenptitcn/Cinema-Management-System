@@ -214,7 +214,7 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
         });
 
         JButtonNext.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        JButtonNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/notepad.png"))); // NOI18N
+        JButtonNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/if_sign-add_299068.png"))); // NOI18N
         JButtonNext.setText("Next");
         JButtonNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,7 +247,7 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
                             .addComponent(jButtonDeleteTime))
                         .addComponent(jSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextFieldIdTime, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldIdTime, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(187, 187, 187))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -428,7 +428,6 @@ public class AddShowtimeFrm extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 0, 0));
-        jButton8.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\icons8-exit-26.png")); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);

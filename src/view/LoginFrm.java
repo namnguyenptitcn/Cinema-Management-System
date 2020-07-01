@@ -45,6 +45,7 @@ public class LoginFrm extends javax.swing.JFrame {
         jPasswordField = new javax.swing.JPasswordField();
         jPassLabel = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -88,15 +89,14 @@ public class LoginFrm extends javax.swing.JFrame {
                 jUsernameFieldFocusLost(evt);
             }
         });
-        jPanel2.add(jUsernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 201, 40));
+        jPanel2.add(jUsernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 201, 40));
 
-        jUsernameLabel.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jUsernameLabel.setFont(new java.awt.Font("Arial Black", 1, 22)); // NOI18N
         jUsernameLabel.setForeground(new java.awt.Color(255, 255, 0));
         jUsernameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-account-32.png"))); // NOI18N
         jUsernameLabel.setText("Username");
-        jPanel2.add(jUsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, 40));
+        jPanel2.add(jUsernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 200, 40));
 
-        jPasswordField.setText("jPasswordField1");
         jPasswordField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jPasswordFieldFocusGained(evt);
@@ -105,13 +105,13 @@ public class LoginFrm extends javax.swing.JFrame {
                 jPasswordFieldFocusLost(evt);
             }
         });
-        jPanel2.add(jPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 201, 40));
+        jPanel2.add(jPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 201, 40));
 
-        jPassLabel.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jPassLabel.setFont(new java.awt.Font("Arial Black", 1, 22)); // NOI18N
         jPassLabel.setForeground(new java.awt.Color(255, 255, 51));
         jPassLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-key-32.png"))); // NOI18N
         jPassLabel.setText("Password");
-        jPanel2.add(jPassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        jPanel2.add(jPassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 180, -1));
 
         btnLogin.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.PNG"))); // NOI18N
@@ -121,18 +121,24 @@ public class LoginFrm extends javax.swing.JFrame {
                 btnLoginActionPerformed(evt);
             }
         });
-        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 270, 90, 40));
+        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 410, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_mpctc3pcta0n-hpctc3pctacnh-onyx-cinema-led-e1544440515817.jpg"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 410));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("LOGIN");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 350, -1));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BG2.jpg"))); // NOI18N
+        jLabel3.setText("LOGIN");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 410));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,6 +244,7 @@ public class LoginFrm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

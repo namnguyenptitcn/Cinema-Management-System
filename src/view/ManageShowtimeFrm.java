@@ -53,7 +53,6 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_sign-add_299068.png")); // NOI18N
         jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +61,6 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_edit_173002.png")); // NOI18N
         jButton3.setText("Edit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +69,6 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         });
 
         jButton4.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_minus_1645995.png")); // NOI18N
         jButton4.setText("Delete");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,15 +76,15 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\if_clock_1055090.png")); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Showtime");
 
         jLabelName.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\icons8-exit-26.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-exit-26.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -106,27 +103,25 @@ public class ManageShowtimeFrm extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelName, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addGap(47, 47, 47))
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelName, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1))
+                        .addGap(56, 56, 56)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(91, 91, 91)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(56, 56, 56)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(91, 91, 91)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(61, 61, 61)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(223, 223, 223)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 109, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(223, 223, 223)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

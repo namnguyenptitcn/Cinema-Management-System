@@ -1,22 +1,72 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package view;
 
-/**
- *
- * @author kimva
- */
+package view;
+import model.Ticket;
+import dao.statDAO;
+import dao.statdetailfilmDAO;
+import dao.statfilmDAO;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import model.Employee;
+import model.statShowTime;
+import model.statfilm;
+import view.StatiscalManage;
+
 public class StatisticalTicket extends javax.swing.JFrame {
+    private Employee em;
+        public DefaultTableModel tmMH;
 
     /**
      * Creates new form StatisticalTicket
      */
-    public StatisticalTicket() {
+    public StatisticalTicket(Employee em) {
         initComponents();
+        initTable();
+        this.em = em;
     }
+        private void initTable() {
+        statDAO statf = new statDAO();
+            ArrayList<Ticket> listf;
+            listf = statf.statTicket();
+            String[][] value = new String[listf.size()][8];
+            for (int i = 0; i < listf.size(); i++) {
+                value[i][0] = listf.get(i).getId() + "";
+                value[i][1] = listf.get(i).getStt()+ "";
+                value[i][2] = listf.get(i).getDate() + "";
+                value[i][3] = listf.get(i).getTicket_sold() + "";
+                value[i][4] = listf.get(i).getTotal_revenue() + "";
+                value[i][5] = listf.get(i).getIdFilm() + "";
+                value[i][6] = listf.get(i).getFilmLenght() + "";
+                value[i][7] = listf.get(i).getPrice() + "";
+            }
+        tmMH = new DefaultTableModel(value,
+                new String[]{
+                    "id","STT", "Date", "Ticket Sold", "Total Revenue"
+                });
+        System.out.println(tmMH.toString());
+        //tmMH=new DefaultTableModel();trong fcuoxjj song cuas chungs ta khog cos cai gf id f la fla alflf alaf laflafds laf laf aflaflalf alf aflaflalf alfdsasldfjsaijrwoeirxncsajhfoaiiowrsknfseivsdkhffiuihfvcxcls asdtrogcisongcua chungta khong phair thuwgif quan trong at thuej uwj la vayth nungngyuowif ncos ther godducoj mhanchawm tu trong ,at phutkhong bet boj noi cos gfi maf fonhanh thr enhi 
+        //jTable1=new JTable(tmMH);
+        jTable1.setModel(tmMH);
+        System.err.println("xin chao");
+
+    }
+        private void changedate() {
+        String result = "";
+        try {
+            String s1, s2;
+            s1 = sdate.getDate().toString();
+            s2 = edate.getDate().toString();
+            DateFormat df = new SimpleDateFormat("yyyy-mm-dd");
+            // JOptionPane.showMessageDialog(null,df.format(sdate.getDate()));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "không được để trông ");
+
+        }
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,12 +82,12 @@ public class StatisticalTicket extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        edate = new com.toedter.calendar.JDateChooser();
+        sdate = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
@@ -75,9 +125,16 @@ public class StatisticalTicket extends javax.swing.JFrame {
         jLabel3.setText("End Date");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/if_search_magnifying.png"))); // NOI18N
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/excel.png"))); // NOI18N
         jButton2.setText("Export Excel");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,12 +143,19 @@ public class StatisticalTicket extends javax.swing.JFrame {
         });
 
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mail.png"))); // NOI18N
         jButton4.setText("Send Email");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+
+        edate.setDateFormatString("dd/MM/yyyy");
+        edate.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        sdate.setDateFormatString("dd/MM/yyyy");
+        sdate.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -100,55 +164,70 @@ public class StatisticalTicket extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(sdate, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(edate, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(sdate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                                .addComponent(edate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "id", "STT", "Date", "Ticket sold", "Total revenue"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTable1MousePressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jButton5.setBackground(new java.awt.Color(255, 51, 51));
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton5.setText("Back");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,11 +239,11 @@ public class StatisticalTicket extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
+                .addGap(88, 88, 88))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,11 +252,11 @@ public class StatisticalTicket extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -191,42 +270,82 @@ public class StatisticalTicket extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StatisticalTicket.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StatisticalTicket.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StatisticalTicket.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StatisticalTicket.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        (new StatiscalManage(em)).setVisible(true);
+        this.dispose();         // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new StatisticalTicket().setVisible(true);
+    private void jTable1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MousePressed
+         int column = jTable1.getColumnModel().getColumnIndexAtX(evt.getX()); // get the coloum of the button
+        int row = evt.getY() / jTable1.getRowHeight(); // get the row of the button
+        if (row < jTable1.getRowCount() && row >= 0 && column < jTable1.getColumnCount() && column >= 0) {
+           
+           String term=(String) jTable1.getValueAt(row, column);
+           
+          // int ticket=(int) jTable1.getValueAt(row, column);
+            JOptionPane.showMessageDialog(null, term);
+            statDAO statf = new statDAO();
+            ArrayList<Ticket> listf;
+            listf = statf.statTicket();
+
+            String[] columnNames = {"showtime", "Date", "Ticket Sold", "Total Revenue"};
+            String[][] value = new String[listf.size()][8];
+            for (int i = 0; i < listf.size(); i++) { 
+                value[i][0] = listf.get(i).getId()+ "";
+                value[i][1] = listf.get(i).getDate() + "";
+                value[i][2] = listf.get(i).getTicket_sold() + "";
+                value[i][3] = listf.get(i).getTotal_revenue() + "";
+                
+                
+                
             }
-        });
-    }
+            DefaultTableModel tableModel = new DefaultTableModel(value, columnNames) {
+                @Override
+                public boolean isCellEditable(int row, int column) {
+                    //unable to edit cells
+                    return false;
+                }
+            };
+            jTable1.setModel(tableModel);
+
+        }
+    }//GEN-LAST:event_jTable1MousePressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JButton btnClicked = (JButton) evt.getSource();
+        if (btnClicked.equals(jButton1)) {
+            //JOptionPane.showMessageDialog(null,"xin chao mọi người");
+            changedate();
+            statfilmDAO statf = new statfilmDAO();
+            ArrayList<statfilm> listf;
+            listf = statf.searchfilm(sdate.getDate(), edate.getDate());
+
+            String[] columnNames = {"Id", "Suat Chieu", "Tong ve", "doanh thu"};
+            String[][] value = new String[listf.size()][8];
+            for (int i = 0; i < listf.size(); i++) {
+                value[i][0] = listf.get(i).getId() + "";
+                value[i][1] = listf.get(i).getName();
+                value[i][2] = listf.get(i).getTicket() + "";
+                value[i][3] = listf.get(i).getIncome() + "";
+                value[i][5] = listf.get(i).getIdFilm() + "";
+                value[i][6] = listf.get(i).getFilmLenght() + "";
+                value[i][7] = listf.get(i).getPrice() + "";
+            }
+            DefaultTableModel tableModel = new DefaultTableModel(value, columnNames) {
+                @Override
+                public boolean isCellEditable(int row, int column) {
+                    //unable to edit cells
+                    return false;
+                }
+            };
+            jTable1.setModel(tableModel);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser edate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -239,7 +358,6 @@ public class StatisticalTicket extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private com.toedter.calendar.JDateChooser sdate;
     // End of variables declaration//GEN-END:variables
 }

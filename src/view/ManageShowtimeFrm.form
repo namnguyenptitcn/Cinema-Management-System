@@ -68,33 +68,29 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <Component id="jButton5" min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabelName" min="-2" pref="149" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jButton5" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabelName" min="-2" pref="149" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" pref="156" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                          <Component id="jButton3" min="-2" pref="156" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="jButton4" min="-2" pref="158" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                  <Component id="jButton2" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                                  <Component id="jButton3" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                  <Component id="jButton4" min="-2" pref="158" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" min="-2" pref="292" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="109" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="292" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace pref="119" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -130,9 +126,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\if_sign-add_299068.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Add"/>
           </Properties>
           <Events>
@@ -143,9 +136,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="14" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\if_edit_173002.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Edit"/>
           </Properties>
@@ -158,9 +148,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="14" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\if_minus_1645995.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Delete"/>
           </Properties>
           <Events>
@@ -170,11 +157,9 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Black" size="18" style="1"/>
+              <Font name="Arial Black" size="24" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\if_clock_1055090.png"/>
-            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Manage Showtime"/>
           </Properties>
         </Component>
@@ -194,7 +179,7 @@
               <Color blue="0" green="0" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Download\cinema-management-system-master\cinema-management-system-master\CinemaManagement\src\images\icons8-exit-26.png"/>
+              <Image iconType="3" name="/images/icons8-exit-26.png"/>
             </Property>
           </Properties>
           <Events>

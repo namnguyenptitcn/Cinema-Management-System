@@ -9,7 +9,7 @@ import javax.swing.JButton;
 
 import javax.swing.JOptionPane;
 import model.Employee;
-
+import view.StatiscalManage;
 /**
  *
  * @author NamNguyen
@@ -56,7 +56,7 @@ public class ManageHomeFrm extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon("D:\\Download\\cinema-management-system-master\\cinema-management-system-master\\CinemaManagement\\src\\images\\icons8-exit-26.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-exit-26.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -88,6 +88,11 @@ public class ManageHomeFrm extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/newspaper.png"))); // NOI18N
         jButton5.setText("Stat");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cash.png"))); // NOI18N
@@ -108,7 +113,7 @@ public class ManageHomeFrm extends javax.swing.JFrame {
                 .addComponent(jLabelName, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(35, 35, 35))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -130,8 +135,8 @@ public class ManageHomeFrm extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(76, 76, 76)
@@ -179,6 +184,11 @@ public class ManageHomeFrm extends javax.swing.JFrame {
         this.dispose();
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        (new StatiscalManage(em)).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

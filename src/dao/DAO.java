@@ -20,7 +20,7 @@ public class DAO {
         
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=theater;user=sa;password=12345678 ";
+            String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=theater;user=sa;password=123456";
             con = DriverManager.getConnection(dbURL);
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
